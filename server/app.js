@@ -2,7 +2,7 @@
 const express = require('express'),
   path = require('path'),
   cookieParser = require('cookie-parser'),
-  router = require('./routes'),
+  api = require('./api'),
   logger = require('morgan');
 
 const app = express();
@@ -12,6 +12,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(router);
+app.use('/api', api);
 
 exports = module.exports = app;
