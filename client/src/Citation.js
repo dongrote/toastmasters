@@ -11,7 +11,7 @@ const Citation = ({source}) => (
       <Item.Meta><strong>Author:</strong> {source.author}</Item.Meta>
       <Item.Description>
         {source.container && <LabeledParagraph label='Container' content={source.container} />}
-        {source.otherContributors && <LabeledParagraph label='Contributors' content={source.otherContributors.join(', ')} />}
+        {source.otherContributors && <LabeledParagraph label='Other Contributors' content={source.otherContributors.join(', ')} />}
         {source.publisher && <LabeledParagraph label='Publisher' content={source.publisher} />}
         {source.date && <LabeledParagraph label='Date' content={source.date} />}
         {source.location && <LabeledLink label='Location' href={source.location} />}
